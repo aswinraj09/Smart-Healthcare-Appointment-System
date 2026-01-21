@@ -1,29 +1,37 @@
-import { hover, frame } from 'motion-dom';
-import { extractEventInfo } from '../events/event-info.mjs';
-import { Feature } from '../motion/features/Feature.mjs';
+import { isDragActive } from './drag/state/is-active.mjs';
+import { setupGesture } from './utils/setup.mjs';
 
-function handleHoverEvent(node, event, lifecycle) {
-    const { props } = node;
-    if (node.animationState && props.whileHover) {
-        node.animationState.setActive("whileHover", lifecycle === "Start");
-    }
-    const eventName = ("onHover" + lifecycle);
-    const callback = props[eventName];
-    if (callback) {
-        frame.postRender(() => callback(event, extractEventInfo(event)));
-    }
+function isValidHover(event) {
+    return !(event.pointerType === "touch" || isDragActive());
 }
-class HoverGesture extends Feature {
-    mount() {
-        const { current } = this.node;
-        if (!current)
+/**
+ * Create a hover gesture. hover() is different to .addEventListener("pointerenter")
+ * in that it has an easier syntax, filters out polyfilled touch events, interoperates
+ * with drag gestures, and automatically removes the "pointerennd" event listener when the hover ends.
+ *
+ * @public
+ */
+function hover(elementOrSelector, onHoverStart, options = {}) {
+    const [elements, eventOptions, cancel] = setupGesture(elementOrSelector, options);
+    const onPointerEnter = (enterEvent) => {
+        if (!isValidHover(enterEvent))
             return;
-        this.unmount = hover(current, (_element, startEvent) => {
-            handleHoverEvent(this.node, startEvent, "Start");
-            return (endEvent) => handleHoverEvent(this.node, endEvent, "End");
-        });
-    }
-    unmount() { }
+        const { target } = enterEvent;
+        const onHoverEnd = onHoverStart(target, enterEvent);
+        if (typeof onHoverEnd !== "function" || !target)
+            return;
+        const onPointerLeave = (leaveEvent) => {
+            if (!isValidHover(leaveEvent))
+                return;
+            onHoverEnd(leaveEvent);
+            target.removeEventListener("pointerleave", onPointerLeave);
+        };
+        target.addEventListener("pointerleave", onPointerLeave, eventOptions);
+    };
+    elements.forEach((element) => {
+        element.addEventListener("pointerenter", onPointerEnter, eventOptions);
+    });
+    return cancel;
 }
 
-export { HoverGesture };
+export { hover };

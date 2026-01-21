@@ -1,6 +1,5 @@
-/**
- * Convert camelCase to dash-case properties.
- */
-const camelToDash = (str) => str.replace(/([a-z])([A-Z])/gu, "$1-$2").toLowerCase();
+function camelToDash(str) {
+    return str.replace(/([A-Z])/g, (match) => `-${match.toLowerCase()}`);
+}
 
 export { camelToDash };
