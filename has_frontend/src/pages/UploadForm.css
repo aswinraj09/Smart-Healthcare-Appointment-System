@@ -1,0 +1,140 @@
+/* PAGE WRAPPER */
+.upload-page {
+  background: linear-gradient(135deg, #e3f2fd, #f5faff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CARD */
+.upload-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 560px;
+  padding: 30px;
+  margin: 80px 0px;
+  margin-bottom: 150px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.4s ease;
+}
+
+/* TITLE */
+.upload-card h2 {
+  margin-left: 30px;
+  margin-bottom: 25px;
+  color: #049aa7;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* FORM */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* LABEL */
+.upload-form label {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+/* INPUTS */
+.upload-form input,
+.upload-form select,
+.upload-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cfd8dc;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+.upload-form input:focus,
+.upload-form select:focus,
+.upload-form textarea:focus {
+  outline: none;
+  border-color: #00a1b0;
+}
+
+/* TEXTAREA */
+.upload-form textarea {
+  resize: none;
+  min-height: 90px;
+}
+
+/* FILE INPUT */
+.upload-form input[type="file"] {
+  padding: 10px;
+  background: #f8f9fa;
+}
+
+/* BUTTON */
+.upload-form button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #00a1b0;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-form button:hover {
+  background: #01909d;
+  transform: translateY(-2px);
+}
+
+/* DISABLED */
+.upload-form button:disabled {
+  background: #90caf9;
+  cursor: not-allowed;
+}
+
+/* SUCCESS / ERROR MESSAGE */
+.form-alert {
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-alert.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.form-alert.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .upload-card {
+    padding: 20px;
+  }
+
+  .upload-card h2 {
+    font-size: 20px;
+  }
+}

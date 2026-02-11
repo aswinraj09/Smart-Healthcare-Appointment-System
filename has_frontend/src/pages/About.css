@@ -1,0 +1,157 @@
+.about-page {
+  background: #f4f7fb;
+  margin-top: 70px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* HERO */
+.about-hero {
+  background: linear-gradient(135deg, #00a1b0, #0ea5a4);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.95;
+}
+
+/* MISSION & VISION */
+.about-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: -60px auto 60px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.about-card {
+  background: white;
+  width: 300px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.about-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+
+
+.about-icon.red {
+  color: #00a1b0;
+}
+
+.about-icon.green {
+  color: #00a1b0;
+}
+
+.about-card h2 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.about-card p {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* FEATURES */
+.about-features {
+  padding: 60px 20px;
+  text-align: center;
+  margin-left: 80px;
+}
+
+.about-features h2 {
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #0f172a;
+  transition: all 0.3s ease;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  width: 220px;
+}
+
+.about-card svg {
+  font-size: 36px;
+  color: #00a1b0;
+  margin-bottom: 10px;
+}
+
+.about-card:hover{
+  color: #00a1b0;
+  box-shadow: 0 12px 25px rgba(0, 0, 0.1, 0.2);
+}
+
+/* FOOTER */
+.about-footer {
+  background: white;
+  padding: 50px 20px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.about-footer h2 {
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.about-footer p {
+  max-width: 600px;
+  margin: auto;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 30px;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

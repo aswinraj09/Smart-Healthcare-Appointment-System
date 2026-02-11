@@ -1,0 +1,148 @@
+.availability-page {
+  margin-top: 90px;
+  padding: 30px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.availability-layout {
+  display: flex;
+  gap: 30px;
+}
+
+/* EACH CARD */
+.availability-card-box {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.09);
+}
+
+.availability-card-box h1 {
+  margin-left: 40px;
+  color: #268088;
+  font-weight: 800;
+}
+
+/* FORM */
+.availability-card-box input {
+  width: 630px;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+}
+
+.availability-card-box input:focus{
+  outline: none;
+  border-color: #00a1b0;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.1);
+}
+
+.availability-card-box button {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 550;
+  background: #00a1b0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.availability-card-box button:hover {
+  background: #1e9aa3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* AVAILABILITY LIST */
+.availability-items{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons button{
+  font-size: 13px;
+  padding : 5px;
+  width: 68px;
+}
+
+.availability-item {
+  background: #e4f2f3;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-right: 30px;
+}
+
+.empty-text {
+  color: #777;
+  margin-top: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar label {
+  font-weight: 500;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #00a1b0;
+  color: white;
+}
+
+.search-bar button:hover {
+  background: #00a1b0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .availability-layout {
+    flex-direction: column;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

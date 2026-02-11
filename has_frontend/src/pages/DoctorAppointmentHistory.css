@@ -1,0 +1,125 @@
+.doctor-history-page {
+  padding: 30px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-bar button {
+  padding: 8px 14px;
+  border: none;
+  background: #1e9aa3;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid white;
+  align-items: center;
+  padding: 15px 18px;
+  border-radius: 10px;
+  background: #f9fafb;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+}
+
+.history-card:hover {
+  border-color: #1e9aa3;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #facc15;
+  color: #78350f;
+}
+
+.status.cancelled {
+  background: #fecaca;
+  color: #7f1d1d;
+}
+
+.status.completed {
+  background: #bbf7d0;
+  color: #14532d;
+}
+
+.empty-text {
+  margin-top: 30px;
+  color: gray;
+}
+
+.history-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.history-controls input[type="date"] {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.date-search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.clear-date-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-date-btn:hover {
+  background: #d32f2f;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

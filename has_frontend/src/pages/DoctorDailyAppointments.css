@@ -1,0 +1,98 @@
+.doctor-daily-page {
+  padding: 30px;
+  animation: fadeIn 0.4s ease-in-out;
+  margin-bottom: 245px;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.appointment-card {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 110px;
+}
+
+.status.pending { background: rgba(247, 170, 27, 0.766); color: #282727; }
+.status.completed { background: rgb(1, 162, 1, 0.766); color: #282727 }
+.status.cancelled { background: rgba(252, 37, 37, 0.766); color: #282727 }
+
+.btn-group button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.complete-btn {
+  color: white;
+  width: 150px;
+  height: 40px;
+}
+
+.cancel-btn {
+  color: white;
+  width: 150px;
+}
+
+.admin-alert {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 2000;
+  animation: slideDown 0.4s ease;
+}
+
+.admin-alert.success {
+  background: #a5e4ea;
+  color: #024b51;
+  border: 1px solid #4ae1ef;
+}
+
+.admin-alert.error {
+  background: #a9e1e7;
+  color: #024b51;
+  border: 1px solid #46dbe9;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
