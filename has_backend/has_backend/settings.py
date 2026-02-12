@@ -109,6 +109,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'has_backend.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://smart-healthcare-appointment-system-8fpiugglj.vercel.app"
+]
+
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
