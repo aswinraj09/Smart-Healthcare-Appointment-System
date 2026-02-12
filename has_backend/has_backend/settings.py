@@ -63,7 +63,8 @@ MIDDLEWARE = [
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173", 
+    "http://localhost:5173",
+    "https://your-frontend.vercel.app",
 ]
 
 SESSION_COOKIE_SECURE = False  
