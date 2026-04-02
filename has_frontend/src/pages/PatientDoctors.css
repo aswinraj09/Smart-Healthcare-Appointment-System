@@ -1,0 +1,178 @@
+.doctor-page {
+  padding: 30px 70px;
+  padding-top: 5px;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.doctor-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0.1, 0.3);
+}
+
+h1{
+    margin-left: 50px;
+    font-weight: 750;
+    color: #2f8288;
+    font-size: 37px;
+}
+
+.doctor-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.status {
+  display: inline-block;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+button {
+  padding: 7px 55px;
+  font-size: 15px;
+  font-weight: 550;
+  background: #00a1b0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover{
+  background: #1e9aa3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  margin: 15px 50px 25px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #00a1b0;
+}
+
+.empty-text {
+  text-align: center;
+  color: #666;
+  font-weight: 500;
+}
+
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.confirm-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: scaleUp 0.25s ease;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.confirm-actions .cancel {
+  background: #ddd;
+}
+
+.confirm-actions .confirm {
+  background: #e74c3c;
+  color: white;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .doctor-page {
+    padding: 20px 15px;
+  }
+
+  .doctor-card {
+    padding: 15px;
+  }
+
+  button {
+    padding: 7px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .search-input {
+    max-width: 100%;
+    margin: 15px 20px 25px;
+  }
+}
+

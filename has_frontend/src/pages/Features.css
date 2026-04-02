@@ -1,0 +1,141 @@
+.features-page {
+  color: #0f172a;
+  margin-top: 50px;
+}
+
+/* HERO */
+.features-hero {
+  background: linear-gradient(135deg, #0ea5a526, #0285c72e);
+  color: #0ea5a4;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.features-hero h1 {
+  font-size: 44px;
+  margin-bottom: 15px;
+}
+
+.features-hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* SECTIONS */
+.section {
+  padding: 90px 80px;
+}
+
+.section.light {
+  background: linear-gradient(135deg, #0ea5a526, #0285c72e);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+/* FEATURE CARD */
+.feature-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 35px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0.1,0.2);
+}
+
+.feature-card svg {
+  font-size: 42px;
+  color: #0ea5a4;
+  margin-bottom: 15px;
+}
+
+/* SECURITY */
+.security-box {
+  max-width: 750px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.security-box svg {
+  font-size: 40px;
+  color: #0ea5a4;
+  margin-bottom: 15px;
+}
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, #2563eb, #0ea5a4);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 36px;
+}
+
+.cta-section p {
+  margin: 15px 0 30px;
+}
+
+.primary-btn {
+  padding: 14px 36px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .section {
+    padding: 70px 25px;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

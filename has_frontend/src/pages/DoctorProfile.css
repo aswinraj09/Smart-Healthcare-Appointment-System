@@ -1,0 +1,102 @@
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.profile-card {
+  width: 420px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-top: 50px;
+  margin-bottom: 131px;
+}
+
+h1{
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.edit-btn {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: #0ea5a4;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.profile-form {
+  text-align: left;
+}
+
+.profile-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.profile-form input {
+  width: 400px;
+  padding: 8px;
+  margin-top: 4px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+}
+
+.profile-form input:focus{
+  outline: none;
+  border-color: #00a1b0;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.1);
+}
+
+.profile-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.profile-actions button {
+  flex: 1;
+  padding: 10px;
+}
+
+.cancel {
+  background: #ccc;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

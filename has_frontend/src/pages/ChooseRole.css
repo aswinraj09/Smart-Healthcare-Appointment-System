@@ -1,0 +1,88 @@
+.role-container {
+  min-height: 640px;
+  margin-top: 193px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4f7fb;
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.role-container h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #1f2937;
+}
+
+.role-cards {
+  display: flex;
+  gap: 30px;
+}
+
+.role-card {
+  width: 260px;
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.role-icon {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+.patient-icon {
+  color: #00a1b0; /* blue */
+}
+
+.doctor-icon {
+  color: #00a1b0; /* green */
+}
+
+.role-card h2 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.role-card p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .role-cards {
+    flex-direction: column;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

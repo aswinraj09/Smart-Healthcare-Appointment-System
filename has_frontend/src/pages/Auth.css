@@ -1,0 +1,203 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  margin-top: 79px;
+  margin-bottom: 26px;
+  background: #ffffff;
+  width: 800px;
+  padding: 0px 30px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.register-card h1 {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #00a1b0;
+}
+
+.register-card input,
+.register-card select
+ {
+  padding: 7px;
+  width: 780px;
+  margin-bottom: 12px;
+  margin-top: 2px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 14px;
+}
+
+.register-card select {
+  width: 800px;
+}
+
+label{
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 5px;
+  color: rgb(91, 91, 91);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 7px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #64748b;
+  transition: color 0.3s;
+}
+
+.eye-icon:hover {
+  color: #00a1b0;
+}
+
+
+.register-card input:focus {
+  outline: none;
+  border-color: #00a1b0;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.1);
+}
+
+.register-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background: #00a1b0;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-card button:hover {
+  background: #1e9aa3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.terms-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.terms-link {
+  color: #00a1b0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.underline-link {
+  cursor: pointer;
+  color: #00a1b0;
+}
+
+.underline-link:hover {
+  text-decoration: underline;
+}
+
+
+.ux-tip {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.field-error {
+  color: #00a1b0;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.auth-switch{
+  font-size: 16px;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+
+.admin-alert {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  z-index: 9999;
+  animation: slideIn 0.3s ease;
+}
+
+.admin-alert.success {
+  background-color: #1e9aa3;
+}
+
+.admin-alert.error {
+  background-color: #1e9aa3;
+}
+
+.admin-alert.welcome {
+  background-color: #1e9aa3;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
