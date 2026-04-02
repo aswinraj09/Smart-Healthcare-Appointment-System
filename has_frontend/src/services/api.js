@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: process.env.REACT_APP_API_URL || "http://127.0.0.1:8000",
   withCredentials: true,
 });
 
@@ -9,7 +9,6 @@ api.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response?.status === 401) {
-      // Let the app show a global login alert before redirecting
       try {
         window.dispatchEvent(
           new CustomEvent("unauthenticated", {
