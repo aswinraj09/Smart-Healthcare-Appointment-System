@@ -9,10 +9,10 @@ certifi==2025.11.12
 charset-normalizer==3.4.4
 dataclasses-json==0.6.7
 distro==1.9.0
+dj-database-url==3.1.2
 Django==5.2.8
 django-cors-headers==4.9.0
 django-crontab==0.7.1
-dj-database-url==2.1.0
 djangorestframework==3.16.1
 frozenlist==1.8.0
 gunicorn==25.0.3
@@ -70,10 +70,3 @@ whitenoise==6.11.0
 xxhash==3.6.0
 yarl==1.22.0
 zstandard==0.25.0
-django
-gunicorn
-whitenoise
-psycopg2-binary
-dj-database-url
-django-cors-headers
-python-dotenv
