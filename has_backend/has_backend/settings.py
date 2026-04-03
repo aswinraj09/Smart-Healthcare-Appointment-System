@@ -70,7 +70,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173", 
     "http://localhost:5174",
-    "https://smart-healthcare-appointment-system-htts-jf7jna3q1.vercel.app"
+    "https://smart-healthcare-appointment-system-xi.vercel.app/"
 ]
 
 SESSION_COOKIE_SECURE = False  
